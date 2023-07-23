@@ -40,6 +40,7 @@ int  main(int argc, char *argv[]){
 				perm[(i+1)*3] = sst[i];
 		}
 	}
+	printf("%lu ", buf.st_ino);
 	printf("%s ", perm);
 	printf("%lu ", buf.st_nlink);
 	pwd = getpwuid( buf.st_uid );

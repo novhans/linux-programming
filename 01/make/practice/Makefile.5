@@ -1,0 +1,10 @@
+CC = gcc -Wall
+CFLAGS = -c
+TARGET = aaa
+OBJS = main.o add.o 
+CC := $(CC) -g
+TARGET : $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET)
+
+.c.o :
+	$(CC) $(CFLAGS) $<
